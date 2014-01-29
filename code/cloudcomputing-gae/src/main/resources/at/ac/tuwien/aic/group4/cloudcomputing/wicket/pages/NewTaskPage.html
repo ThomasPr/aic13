@@ -1,0 +1,42 @@
+<wicket:extend>
+
+	<div class="span6 offset3">
+	
+		<fieldset>
+			<legend>New Task</legend>
+			
+			<div wicket:id="feedback" />
+		
+			<form wicket:id="form" class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="searchString">Search Query:</label>
+					<div class="controls">
+						<input wicket:id="searchString" type="text" id="searchString" class="input-xlarge" />
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<label class="control-label" for="startDate">start date:</label>
+					<div class="controls">
+						<input wicket:id="startDate" type="text" id="startDate" class="input-xlarge" />
+					</div>
+				</div>
+		
+				<div class="control-group">
+					<label class="control-label" for="endDate">end date:</label>
+					<div class="controls">
+						<input wicket:id="endDate" type="text" id="endDate" class="input-xlarge" />
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn">Analyse Tweets</button>
+					</div>
+				</div>
+			</form>
+		</fieldset>
+	</div>		
+		
+
+</wicket:extend>

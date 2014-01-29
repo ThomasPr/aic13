@@ -1,0 +1,17 @@
+\section{Introduction}
+%zu einer passenden Einleitung umformen
+%Your task in this project is to develop a simple cloud-based service for Twitter-based sentiment analysis1. Sentiment analysis is, broadly, the process of finding out (typically automatically) what the general feeling (“sentiment”) of one or more Web communities (for instance, the blogosphere or the Twitter community) about a company or product is. This sort of analysis has become an increasingly relevant marketing tool in recent years.%Your service should provide two basic functionalities:%1. Prospective customers can register for your service, that is, they provide their company name for sentiment monitoring. You do not need to bother with other boring details, like payment information, at this point.%2. Afterwards, registered customers can query the aggregated sentiment for a specified time period. For simplicity, the output of your service should be a simple numerical value between 0 (people with pitchforks have been sighted striving towards the company headquarters) and 1 (people buy whatever the company CEO tells them to buy).
+%
+%You are expecting that this service will pick up in popularity quickly, hence, you are designing and implementing your service based on an elastically scaling cloud computing infrastructure [1, 4].%
+
+%%A very high-level sketch of the system architecture we propose is given in Figure 1. Essentially, clients communicate with your service through a service interface. The actual implementation of this service is parallelized in a “cluster” of n cloud virtual machines. The size of n should be dynamic and depend on the current load on the system. For practical reasons (see tasks below), your system should be implemented in Java.
+
+
+
+%TODO Amazon mit erwähnen und google
+
+This paper introduces a project which uses cloud computing techniques to do a sentimental classification of tweets. The focus lies on the work distribution of the classification and not on the classification itself. 
+
+The first part of the project uses various number of instances from Amazon EC2, a well-known Infrastructure as a Service provider, to distribute the classification work. The difficulty is to develop an algorithm which distributes the work load in a handy way with respect to the costs.
+
+Secondly the classification system should be moved over to Google's App Engine, a Platform as a Service provider.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+  <datastore-index kind="Task" ancestor="true" source="manual">
+    <property name="finished" direction="asc" />
+    <property name="searchPattern" direction="asc" />
+    <property name="searchStart" direction="asc" />
+    <property name="searchEnd" direction="asc" />
+  </datastore-index>
+</datastore-indexes>

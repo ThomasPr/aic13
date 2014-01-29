@@ -1,0 +1,13 @@
+\section{Migration to Google App Engine} 
+
+%\subsection{Migration}
+
+The migration to a PaaS platform needs to be considered carefully. It has to be carefully checked, that the decreased flexibility of the new platform fits the requirements. But there may be also some advantages, such as less complexity of the application, because it is not longer necessary to take care about the load distribution and server starting and stopping anymore. Usually the PaaS provider offers some additional features such as a load-balanced database or services for sending huge amount of bulk emails.
+
+For this project the migration to GAE was absolutely terrific. The Google App Engine requires some customisations for Applications. The most dramatic missed feature was the lack of full JPA support. Google App Engine only provides some very basic JPA functions, but Joins are not supported. Furthermore it is required to create for all attributes of all order by clauses to create an index. 
+
+The aim to import the provided set of about 2.7 million tweets failed because of the very costly write operations to the data store. 
+
+In contrast to the deployment to AWS it is not necessary to implement any load balancing algorithms. The Google App Engine cares about the startup and shutdown of instances and forwards incoming request to the less demanded instance. Furthermore a task queue is offered which enables to easily store the classification task for a delayed execution. Backend instances pick up those tasks and are also started and stopped depending on the number of requested classifications.
+
+%For this project the migration from Amazon EC2 to Google App Engine was straight forward. There was not really the need to develop a new application, just the load distribution part was removed from the application. Furthermore it was necessary to develop a new database layer. In Amazon EC2 there was an own database server in place, whereas Google App Engine offers a very scalable Database.

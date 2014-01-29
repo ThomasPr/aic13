@@ -1,0 +1,28 @@
+<wicket:extend>		
+	<div wicket:id="feedback" />
+
+	<p class="text-center">
+		<strong><a wicket:id="newTaskLink">new Task</a></strong>
+	</p>
+
+	<table wicket:id="table" class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Query</th>
+				<th>Period</th>
+				<th>Tweets</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr wicket:id="row">
+				<td wicket:id="searchQuery" />
+				<td wicket:id="period" />
+				<td wicket:id="tweets" />
+				<td wicket:id="result" />
+			</tr>
+		</tbody>
+	</table>
+	
+	
+</wicket:extend>
