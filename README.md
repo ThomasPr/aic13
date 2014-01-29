@@ -12,7 +12,7 @@ The project contains the follwing assets:
 * Login to the AWS Management Console and switch to the Asia Pacific (Tokyo) region
 * Start the instances DB and WEB/MQ
 * Login via `ssh ubuntu@54.238.204.152` and use the provided password
-* `cd aic/code/cloudcomputing/`
+* `cd aic13/code/cloudcomputing/`
 * Run `mvn clean package exec:exec`
 * Point your browser to http://54.238.204.152:8080 and use an arbritary username to login
 * Access cloud statistics at http://54.238.204.152:8080/stats
